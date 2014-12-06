@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+%Sets the LaTeX document as a report of 12-size font.
+\usepackage[english]{babel}
+\usepackage{caption}
+
+
+\title{Functions as they appear separately for both IDL and Python}
+\author{Michael Cox}
+\date{12/3/14}
+%Sets the title, author, and date.
+
+\begin{document}
+%Begins the document
+
+\maketitle
+
+\section{Functions in both IDL and Python}
+%Creates the main section title for this tutorial
+
+\begin{table}[h!]
+%Creates a table to hold the functions in both IDL and Python.
+  \centering
+  % Centers the table.
+   \begin{tabular}{| l | l |}
+    \hline
+    \textbf{IDL Functions} & \textbf{Python Functions} \\ \hline
+    n\_elements() & len() \\ \hline
+    intarr() & np.arrange() \\ \hline
+    if x GT 1 do begin & if x \verb!>! 1: \\
+    \hspace{4 mm}print, x & \hspace{4 mm}print(x) \\
+    endif & \\ \hline
+   \end{tabular}
+   % Creates the actual table to house the functions.
+   \caption{Functions as they appear in both IDL and Python}
+   % Creates a statement to explain the meaning of the table.
+\end{table}
+%Completes the procedure to create a table for the functions for both
+%IDL and Python in a LaTeX document.
+
+\end{document}
+%Ends the document.

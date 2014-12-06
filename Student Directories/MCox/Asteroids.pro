@@ -1,4 +1,4 @@
-pro spaceship
+function spaceship
 x = indgen(10)
 y = x
 plot, x[4:6], y[5:7], xrange = [0,10], yrange = [0,10]
@@ -17,10 +17,15 @@ oplot, r, s
 end
 ;Once this procedure is run, the spaceship will be ploted in as a triangle.
 
-pro rotation
-k = ROT(spaceship, 90)
-plot, k
+function rotation, rock1
+xprime = transpose(x)
+yprime = transpose (y)
+plot, xprime(2,4)
 end
 
-pro rocks
+pro asteroids
+rock1 = spaceship()
+;Recalls the function spaceship into the procedure and plots the points
+;for the spaceship
+rock2 = rotation(rock1)
 end
